@@ -35,10 +35,7 @@ body {
 .header__link:hover {
     color: #ff0000;
 }
-.content {
-    padding: 20px;
-}
-.content, .gallery{
+.content, .gallery, .contact__content {
     display: block;
     text-align: center;
     padding: 20px 50px;
@@ -48,7 +45,23 @@ body {
     width: 80%;
     margin: 30px auto;
 }
-
+.about__content {
+    display: block;
+    text-align: left;
+    padding: 20px 50px;
+    background-color:rgb(164, 196, 236) ;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: 30px auto;
+}
+.about__content__title, .about__content__about_cat {
+    text-align: center;   
+    padding: 10px;
+}
+.about__content__live, .about__content__style {
+    padding-left: 150px;
+}
 .gallery__image {
     padding-top: 30px;
     margin-left: 40px;
