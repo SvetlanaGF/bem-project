@@ -1,0 +1,149 @@
+@use "sass:color"; // Импортируем модуль для работы с цветами
+
+// Переменные
+$primary-color: #3498db; // Основной цвет
+$secondary-color: #2ecc71; // Вторичный цвет
+$font-stack: 'Helvetica Neue', sans-serif; // Стек шрифтов
+$padding: 20px; // Отступы
+/**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6678c9;
+    color: #1a1313;
+    padding: 20px;
+}
+
+.header__nav {
+    display: flex; /* Делаем список флекс-контейнером */
+    flex-direction: column; /* Устанавливаем вертикальное направление для списка */
+}
+
+.header__list {
+    list-style-type: none;
+}
+
+.header__item {
+    margin: 5px 0; /* Отступы между элементами списка */
+}
+
+.header__link {
+    color: #1a1313;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.header__link:hover {
+    color: #ff0000;
+}
+
+.content,
+.gallery,
+.contact__content,
+.section__button {
+    display: block;
+    text-align: center;
+    padding: 20px 50px;
+    background-color: rgb(164, 196, 236);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 30px auto;
+}
+
+.about__content {
+    display: block;
+    text-align: left;
+    padding: 20px 50px;
+    background-color: rgb(164, 196, 236);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: 30px auto;
+}
+
+.about__content__title,
+.about__content__about_cat {
+    text-align: center;   
+    padding: 10px;
+}
+
+.about__content__live,
+.about__content__style {
+    padding-top: 5px;
+    padding-left: 150px;
+    transition: padding-left 0.5s ease;
+}
+
+.gallery__image {
+    padding-top: 30px;
+    margin-left: 40px;
+    width: 20%;
+    height: auto; /* Сохраняем пропорции изображений */
+}
+
+footer {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+// Миксин для кнопок
+@mixin button-styles($bg-color) {
+    background-color: $bg-color;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: color.adjust($bg-color, $lightness: -10%); // Затемнение цвета при наведении
+    }
+}
+
+// Стили для кнопок
+.button__btn__primary {
+    @include button-styles($primary-color);
+}
+
+.button__btn__secondary {
+    @include button-styles($secondary-color);
+}
+
+
+@media (max-width: 840px) {
+   .about__content__live,
+   .about__content__style {
+       padding-left: 0; 
+       padding-top: 3px; 
+   }
+}
+
+@media (max-width: 500px) {
+   .about__content {
+       padding: 20px; 
+       width: 60%; 
+   }
+}

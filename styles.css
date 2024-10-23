@@ -1,100 +1,145 @@
+@charset "UTF-8";
+/**/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #6678c9;
-    color: #1a1313;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6678c9;
+  color: #1a1313;
+  padding: 20px;
 }
+
 .header__nav {
-    display: flex; /* Делаем список флекс-контейнером */
-    flex-direction: column; /* Устанавливаем вертикальное направление для списка */
+  display: flex; /* Делаем список флекс-контейнером */
+  flex-direction: column; /* Устанавливаем вертикальное направление для списка */
 }
+
 .header__list {
-    list-style-type: none;
+  list-style-type: none;
 }
+
 .header__item {
-    margin: 5px 0; /* Отступы между элементами списка */
+  margin: 5px 0; /* Отступы между элементами списка */
 }
+
 .header__link {
-    color: #1a1313;
-    text-decoration: none;
-    margin-left: 15px;
+  color: #1a1313;
+  text-decoration: none;
+  margin-left: 15px;
 }
+
 .header__link:hover {
-    color: #ff0000;
+  color: #ff0000;
 }
+
 .content,
 .gallery,
-.contact__content {
-    display: block;
-    text-align: center;
-    padding: 20px 50px;
-    background-color:rgb(164, 196, 236) ;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin: 30px auto;
+.contact__content,
+.section__button {
+  display: block;
+  text-align: center;
+  padding: 20px 50px;
+  background-color: rgb(164, 196, 236);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 30px auto;
 }
+
 .about__content {
-    display: block;
-    text-align: left;
-    padding: 20px 50px;
-    background-color:rgb(164, 196, 236) ;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    margin: 30px auto;
+  display: block;
+  text-align: left;
+  padding: 20px 50px;
+  background-color: rgb(164, 196, 236);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  margin: 30px auto;
 }
+
 .about__content__title,
 .about__content__about_cat {
-    text-align: center;   
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
+
 .about__content__live,
 .about__content__style {
-    padding-top: 5px;
-    padding-left: 150px;
-    transition: padding-left 0.5s ease;
+  padding-top: 5px;
+  padding-left: 150px;
+  transition: padding-left 0.5s ease;
 }
+
 .gallery__image {
-    padding-top: 30px;
-    margin-left: 40px;
-    width: 20%;
-    height: auto; /* Сохраняем пропорции изображений */
+  padding-top: 30px;
+  margin-left: 40px;
+  width: 20%;
+  height: auto; /* Сохраняем пропорции изображений */
 }
+
 footer {
-    display: block;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.button__btn__primary {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button__btn__primary:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+
+.button__btn__secondary {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button__btn__secondary:hover {
+  background-color: rgb(36.616, 162.384, 89.948);
 }
 
 @media (max-width: 840px) {
-    .about__content__live, 
-    .about__content__style {
-        padding-left: 0;
-        padding-top: 3px;
-    }
+  .about__content__live,
+  .about__content__style {
+    padding-left: 0;
+    padding-top: 3px;
+  }
 }
 @media (max-width: 500px) {
-    .about__content {
-        padding: 20px;
-        width: 60%;
-    }
+  .about__content {
+    padding: 20px;
+    width: 60%;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
