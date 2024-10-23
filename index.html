@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта с логотипом и меню -->
+    <div class="header">
+    <div class="header__logo">My Logo</div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link"
+                href="#">Home</a></li>
+                <li class="header__item"><a class="header__link"
+                href="#">About</a></li>
+                <li class="header__item"><a class="header__link"
+                href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Основное содержание страницы -->
+    <div class="content">
+        <h1 class="content__title">Добро пожаловать на страницу,<br>написанную с применением BEM</h1>
+        <p class="content__text"><br>Это пример страницы, созданной с помощью BEM-методологии и современных практик CSS</p>
+    </div>
+
+    <!-- Cекция для галереи изображений -->
+    <div class="gallery">
+        <h2 class="gallery__title">Галерея изображений</h2>
+        <div class="gallery__grid">
+            <img src="img/cat1.jpg" alt="Изображение 1" class="gallery__image">
+            <img src="img/cat2.jpg" alt="Изображение 2" class="gallery__image">
+            <img src="img/cat3.jpg" alt="Изображение 3" class="gallery__image">
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p class="footer__text">© 2024 BEM Project</p>
+    </footer>
+</body>
+</html>
