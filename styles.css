@@ -35,7 +35,9 @@ body {
 .header__link:hover {
     color: #ff0000;
 }
-.content, .gallery, .contact__content {
+.content,
+.gallery,
+.contact__content {
     display: block;
     text-align: center;
     padding: 20px 50px;
@@ -55,12 +57,16 @@ body {
     width: 40%;
     margin: 30px auto;
 }
-.about__content__title, .about__content__about_cat {
+.about__content__title,
+.about__content__about_cat {
     text-align: center;   
     padding: 10px;
 }
-.about__content__live, .about__content__style {
+.about__content__live,
+.about__content__style {
+    padding-top: 5px;
     padding-left: 150px;
+    transition: padding-left 0.5s ease;
 }
 .gallery__image {
     padding-top: 30px;
@@ -78,4 +84,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
-        
+
+@media (max-width: 840px) {
+    .about__content__live, 
+    .about__content__style {
+        padding-left: 0;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 500px) {
+    .about__content {
+        padding: 20px;
+        width: 60%;
+    }
+}
